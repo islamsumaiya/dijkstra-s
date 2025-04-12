@@ -9,11 +9,11 @@ void addEdge(vector<pair<int,int>>adj[],int u,int v,int wt)
     adj[u].push_back(make_pair(v,wt));
     adj[v].push_back(make_pair(u,wt));
 }
-void shortestPath(vector<pair<int,int>>adj[],int v, int src)
+void shortestPath(vector<pair<int,int>>adj[],int V, int src)
 {
     priority_queue<pair<int,int>,vector<pair<int,int>>,greater<pair<int,int>>>pq;
-    vector<int>dist(v,INF);
-    push_back(make_pair(0,src));
+    vector<int>dist(V,INF);
+    pq.push(make_pair(0,src));
     dist[src]=0;
     while(!pq.empty())
     {
